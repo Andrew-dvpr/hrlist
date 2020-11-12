@@ -1,23 +1,32 @@
 <template>
   <div id="app">
-<header>
+    <header>
       <h1>Список работников</h1>
     </header>
-    
-
+    <v-main-wrapper/>
   </div>
 </template>
 
-<script>
 
+
+
+
+<script>
+import vMainWrapper from './components/V-main-wrapper'
 
 export default {
   name: 'App',
   components: {
-  
+    vMainWrapper
   }
 }
 </script>
+
+
+
+
+
+
 
 <style>
 #app {
