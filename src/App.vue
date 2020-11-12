@@ -1,14 +1,9 @@
 <template>
   <div id="app">
 <header>
-      <h1>Vue.js SPA</h1>
+      <h1>Список работников</h1>
     </header>
-    <main>
-      <aside class="sidebar">
-      </aside>
-      <div class="content">
-      </div>
-    </main>
+    
 
   </div>
 </template>
