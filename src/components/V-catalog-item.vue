@@ -1,10 +1,14 @@
 <template>
   <div class="v-catalog-item">
-    <img src="" alt="">
-   <p>Имя</p>
-   <p>Фамилия</p>
-   <p>Дата рождения</p>
-   <button>Поиск</button>
+    <ul>
+      <li>
+        <img :src="result_data.picture.large" alt="img">
+        <span><h3>{{result_data.name.title + ' ' + result_data.name.first + ' ' + result_data.name.last}}</h3></span>
+        <span>{{result_data.dob.date}}</span>
+        <!-- <span>{{result_data.picture.large}}</span> -->
+      </li>
+    </ul>
+    
   </div>
 </template>
 
@@ -16,7 +20,14 @@
 export default {
   name: 'V-catalog-item',
   components: {},
-  props: {},
+  props: {
+    result_data: {
+      type: Object,
+      default() {
+        return {}
+      }
+    }
+  },
   data() {
     return {}
   },
@@ -28,11 +39,22 @@ export default {
 
 
 
-<style lang="scss">
+
+<style>
   .v-catalog-item {
-  &__image {
-    width: 100px;
-    height: 200px;
+    flex-basis: 100%;
+    box-shadow: 0 0 8px 0 #e0e0e0;
+    padding: 2px;
+    /* margin: 16px; */
+    
   }
+  li {
+    display: flex;
+    list-style-type: none;
+    text-align: left;
+  }
+  span {
+    
+    margin: auto 5px auto 5px;
   }
 </style>

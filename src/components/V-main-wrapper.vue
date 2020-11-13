@@ -1,6 +1,6 @@
 <template>
     <div class="v-main-wrapper">
-        <p>{{title}}</p>
+        <!-- <p>{{title}}</p> -->
         <v-catalog/>
         <v-cart/>
     </div>
@@ -38,13 +38,13 @@ export default {
 
 
 
-<style lang="scss">
+<style>
    .v-main-wrapper {
        display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       max-width: 900px;
+       flex-direction: row;
+       justify-content: left;
+       align-items: left;
+       max-width: 1200px;
        margin: 0 auto;
    }
 
