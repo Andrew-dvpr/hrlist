@@ -31,7 +31,7 @@ export default {
     methods: {},
     watch: {},
     mounted() {
-        console.log('I am alive')
+        // console.log('I am alive')
     },
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <h1>Список работников</h1>
+      <!-- <h1>Список работников</h1> -->
     </header>
     <v-main-wrapper/>
   </div>
@@ -29,8 +29,15 @@ export default {
 
 
 <style>
+@import "~materialize-css/dist/css/materialize.min.css";
+.search-bar {
+    width: 80%;
+    margin: 0 auto;
+  }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  max-width: 900px;
+    margin: 0 auto;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;

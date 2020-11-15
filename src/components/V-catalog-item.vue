@@ -3,8 +3,8 @@
     <ul>
       <li>
         <img :src="result_data.picture.large" alt="img">
-        <span><h3>{{result_data.name.title + ' ' + result_data.name.first + ' ' + result_data.name.last}}</h3></span>
-        <span>{{result_data.dob.date}}</span>
+        <span><h3>{{result_data.name.title + '. ' + result_data.name.first + ' ' + result_data.name.last + ', '}}</h3></span>
+        <span>{{'Birthday: ' + new Date(result_data.dob.date).toLocaleDateString()}}</span>
         <!-- <span>{{result_data.picture.large}}</span> -->
       </li>
     </ul>

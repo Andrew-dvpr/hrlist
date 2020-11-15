@@ -1,15 +1,12 @@
 <template>
-  <div class="v-cart">
-    <!-- <h2>Корзина</h2> -->
+  <div class="v-main-page">
+    <h1>MainPage</h1>
   </div>
 </template>
 
-
-
 <script>
-
 export default {
-  name: 'V-cart',
+  name: 'V-main-page',
   components: {},
   props: {},
   data() {
@@ -21,8 +18,6 @@ export default {
 }
 </script>
 
-
-
-<style>
+<style lang="scss" scoped>
 
 </style>

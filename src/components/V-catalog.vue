@@ -1,9 +1,14 @@
 <template>
+
   <div class="v-catalog">
-    <!-- <h1>Каталог</h1> -->
-    <div class="v-search-panel">
-      <input class="v-input-field" placeholder="First Name or Last Name" type="text">
-      <button class="v-btn">Поиск</button>
+    <nav class="blue darken-3">
+      <a to="/" class="brand-logo" style="margin: 0 0 0 10px;">HR List</a>
+    </nav>  
+
+    <div class="nav-wrapper  input-field">
+      <input id="last_name" class="validate" type="text" v-model="searchValue">
+      <label for="last_name">First Name or Last Name</label>
+      <button class="v-btn" @click="search(searchValue)"><i class="material-icons">search</i></button>
     </div>
        
     <v-catalog-item
@@ -13,6 +18,7 @@
     />
    
   </div>
+
 </template>
 
 
@@ -30,49 +36,68 @@ export default {
   
   data() {
     return {
+      searchValue: ''
     }
   },
  
 computed: {
   ...mapGetters([
-    'RESULTS'
+    'RESULTS',
+    'SEARCH_VALUE'
   ]),
 },
+
 methods: {
-    ...mapActions([
-      'GET_RESULTS_FROM_API'
-    ]),
+  ...mapActions([
+    'GET_RESULTS_FROM_API',
+    'GET_SEARCH_VALUE_TO_VUEX'
+  ]),
+  search(value) {
+    this.GET_SEARCH_VALUE_TO_VUEX(value);
   },
-   mounted() {
-     this.GET_RESULTS_FROM_API()
-   }
+  sortResultsBySearchValue(value) {
+    this.results = this.results.filter(function (item) {
+      return item.name.first.toLowerCase().includes(value.toLowerCase())
+    })
+  }
+},
+
+
+watch: {
+  SEARCH_VALUE() {
+    this.sortResultsBySearchValue(this.SEARCH_VALUE);
+}
+},
+
+mounted() {
+  this.GET_RESULTS_FROM_API()
+}
 }
 </script>
 
 
 
 <style>
-.v-search-panel {
-  background-color: #e0e0e046;
-  top: 0px;
-  left: 0px;
-  width: 100%;
+nav {
   position: fixed;
-  text-align: right;
+  top: 0;
+  left: 0;
 }
-  .v-catalog {
-    max-height: 500px;
+  .nav-wrapper {
+    top: 10px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
   }
-  .v-input-field {
-    color: darkgray;
-    font-size: 110%;
-    width: 320px;
-    padding: 7px 20px 8px 20px;
-    border: 1px solid #e0e0e0;
+  .v-catalog {
+    max-width: 80%;
+    margin: 0 auto;
   }
   .v-btn {
-    border: 1px solid #e0e0e0;
-    margin: 10px 10px 10px 0px;
-    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
   }
+  
 </style>
