@@ -1,14 +1,8 @@
 <template>
   <div id="app">
-    <header>
-      <!-- <h1>Список работников</h1> -->
-    </header>
     <v-main-wrapper/>
   </div>
 </template>
-
-
-
 
 
 <script>
@@ -21,11 +15,6 @@ export default {
   }
 }
 </script>
-
-
-
-
-
 
 
 <style>

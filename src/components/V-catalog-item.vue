@@ -8,14 +8,11 @@
         <!-- <span>{{result_data.login.username}}</span> -->
       </li>
     </ul>
-    
   </div>
 </template>
 
 
-
 <script>
-
 
 export default {
   name: 'V-catalog-item',
@@ -36,8 +33,6 @@ export default {
   methods: {}
 }
 </script>
-
-
 
 
 <style>

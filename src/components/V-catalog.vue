@@ -104,7 +104,6 @@ methods: {
   }
 },
 
-
 watch: {
   SEARCH_VALUE() {
     this.sortResultsBySearchValue(this.SEARCH_VALUE);
@@ -121,7 +120,6 @@ mounted() {
 }
 }
 </script>
-
 
 
 <style>
