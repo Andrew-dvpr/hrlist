@@ -5,7 +5,7 @@ GET_SEARCH_VALUE_TO_VUEX ({commit}, value) {
     commit('SET_SEARCH_VALUE_TO_VUEX', value)
 },
 GET_RESULTS_FROM_API({commit}) {
-    return axios('https://randomuser.me/api/?&results=20&seed=abc&inc=name,login,dob,picture&noinfo', {
+    return axios('https://randomuser.me/api/?&results=1000&seed=abc&inc=name,login,dob,picture&noinfo', {
         method: "GET"
     })
     .then((results) => {

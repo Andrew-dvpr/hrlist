@@ -4,8 +4,8 @@
       <li>
         <img :src="result_data.picture.large" alt="img">
         <span><h3>{{result_data.name.title + '. ' + result_data.name.first + ' ' + result_data.name.last + ', '}}</h3></span>
-        <span>{{'Birthday: ' + new Date(result_data.dob.date).toLocaleDateString()}}</span>
-        <!-- <span>{{result_data.picture.large}}</span> -->
+        <span style="margin: 0 2px 0 auto;">{{'Birthday: ' + new Date(result_data.dob.date).toLocaleDateString()}}<br>{{result_data.login.username}}</span>
+        <!-- <span>{{result_data.login.username}}</span> -->
       </li>
     </ul>
     
@@ -42,10 +42,9 @@ export default {
 
 <style>
   .v-catalog-item {
-    flex-basis: 100%;
+    width:100%;
     box-shadow: 0 0 8px 0 #e0e0e0;
     padding: 2px;
-    /* margin: 16px; */
     
   }
   li {

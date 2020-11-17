@@ -35,7 +35,7 @@ export default {
     margin: 0 auto;
   }
 #app {
-  max-width: 900px;
+  width: 100%;
     margin: 0 auto;
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;

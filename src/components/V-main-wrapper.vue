@@ -44,7 +44,7 @@ export default {
        flex-direction: row;
        justify-content: left;
        align-items: left;
-       max-width: 1200px;
+       width: 100%;
        margin: 0 auto;
    }
 
