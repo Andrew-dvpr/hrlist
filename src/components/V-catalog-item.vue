@@ -28,9 +28,6 @@ export default {
   data() {
     return {}
   },
-  mounted() {},
-  beforeDestroy() {},
-  methods: {}
 }
 </script>
 
